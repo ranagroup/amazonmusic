@@ -32,7 +32,7 @@ public class ArtistController {
 	
 	@RequestMapping(value ="/{id}/detail", method = RequestMethod.GET)
 	public ArtistDto getArtistFromId(@PathVariable(value="id") Long artistId,
-			@RequestHeader(value="auth-token") String aut  hToken) {
+			@RequestHeader(value="auth-token") String authToken) {
 		System.out.println("auth-token : " + authToken);
 		return artistService.getArtistById(artistId);
 	}
